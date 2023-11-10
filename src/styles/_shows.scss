@@ -37,7 +37,6 @@
         @media (max-width: 768px) {
             white-space: nowrap;
             overflow-x: scroll;
-            padding-left: 64px;
         }
 
         &__button {
@@ -51,6 +50,10 @@
             cursor: pointer;
             border-bottom: 5px solid transparent;
             transition: border-bottom .5s ease;
+
+            @media (max-width: 768px) {
+                padding-left: 20px;
+            }
             
             &--is-active {
                 border-color: variaveis.$corTextoSecundario;
