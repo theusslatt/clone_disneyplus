@@ -9,14 +9,20 @@
         display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
         
         &--is-active {
             display: grid;
+        }
 
+        @media (max-width: 768px) {
+            font-size: 16px;
         }
 
         &__item {
-            
             img {
                 width: 100%;
                 border-radius: 4px;
@@ -28,6 +34,12 @@
         display: flex;
         justify-content: center;
 
+        @media (max-width: 768px) {
+            white-space: nowrap;
+            overflow-x: scroll;
+            padding-left: 64px;
+        }
+
         &__button {
             color: variaveis.$corTextoSecundario;
             font-size: 20px;
@@ -38,9 +50,11 @@
             margin: 0 1vw;
             cursor: pointer;
             border-bottom: 5px solid transparent;
+            transition: border-bottom .5s ease;
             
             &--is-active {
                 border-color: variaveis.$corTextoSecundario;
+                transition: border-bottom color .5s ease;
             }
         }
     }
